@@ -1,1 +1,1 @@
-projEuler
+Solving projEuler problems.
