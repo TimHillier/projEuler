@@ -9,19 +9,17 @@ def d(n):
 
 
 
-def isAmicable(n):
+def isAmicable(a):
     global Total
-    A = d(n)
-    B = d(A)
-    if(B == A and B == n):
-        Total.append(n)
-        #Total.append(d(n))
+    B = d(a)
+    A = d(B)
+    if(A == a and A != B):
+        Total.append(a)
 
 def main():
     global Total
     for i in range(1,10001):
         isAmicable(i)
-   # isAmicable(220)
     print(sum(Total))
-    print(Total)
+
 main()
