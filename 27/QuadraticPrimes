@@ -1,0 +1,40 @@
+# https://projecteuler.net/problem=27
+
+
+def isPrime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if not n & 1:
+        return False
+
+    for i in range(3, int(n ** .5) + 1, 2):
+        if (n % i == 0):
+            return False
+    return True
+
+def Quadratic():
+    LongestRun = -1
+    CurrentRun = 0
+    Coefficents = [0,0]
+
+    for a in range(-999,1000):
+        for b in range(-1000,1001):
+            for n in range(0,100000000):
+                C = (n * n) + (a*n) + b
+                if(isPrime(C)):
+                    CurrentRun += 1
+                else:
+                    if(CurrentRun > LongestRun):
+                        LongestRun = CurrentRun
+                        Coefficents[0],Coefficents[1] = a,b
+                    CurrentRun = 0
+                    break
+    print("A = " + str(Coefficents[0]) + " B = " + str(Coefficents[1]) + " total: " + str(Coefficents[0]* Coefficents[1]) + " Longest Run " + str(LongestRun))
+
+def main():
+   Quadratic()
+
+
+main()
