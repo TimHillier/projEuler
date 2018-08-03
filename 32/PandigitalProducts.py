@@ -19,6 +19,7 @@ def intsToString(A,B,C):
     M = [int(x) for x in str(B)]
     N = [int(x) for x in str(C)]
     O = L+M+N
+    print(O)
     return O
 
 

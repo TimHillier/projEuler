@@ -1,1 +1,1 @@
-Solving projEuler problems.
+Solving Project Euler problems.

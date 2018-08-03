@@ -10,7 +10,7 @@ for i in range(0,len(content)):
 content.sort()
 
 for i in range(0,len(content)):
-    list(content[i])
+   # list(content[i])
     numbers = [LETTERS[character] for character in content[i] if character in LETTERS]
     results = [int(i) for i in numbers]
     score.append(sum(results)* (i+1))
